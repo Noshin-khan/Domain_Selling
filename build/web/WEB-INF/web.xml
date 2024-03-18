@@ -16,6 +16,10 @@
         <servlet-name>available</servlet-name>
         <servlet-class>com.dominify.servlet.available</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>bookdomain</servlet-name>
+        <servlet-class>com.dominify.servlet.bookdomain</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>signup</servlet-name>
         <url-pattern>/signup</url-pattern>
@@ -40,5 +44,9 @@
     <servlet-mapping>
         <servlet-name>available</servlet-name>
         <url-pattern>/available</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>bookdomain</servlet-name>
+        <url-pattern>/bookdomain</url-pattern>
     </servlet-mapping>
 </web-app>

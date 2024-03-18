@@ -2,6 +2,7 @@
 package com.dominify.servlet;
 
 import com.dominify.dao.domain_dao;
+import com.dominify.entity.Domain;
 import jakarta.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,6 +10,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 
 
 public class available extends HttpServlet {
@@ -17,7 +19,7 @@ public class available extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try  {
+     try  {
             PrintWriter out = response.getWriter();
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -41,10 +43,15 @@ public class available extends HttpServlet {
             }
             String host=url.substring(begin,index);
             String domain=url.substring(index+1, end);
+            ArrayList available_domains =new ArrayList();
+            Domain  dm=new Domain();
+            dm.setHost(host);
+            dm.setDomain(domain);
             domain_dao dd=new domain_dao();
-            if(dd.checkAvailablity(host))
+            available_domains=dd.getAvail_domain();
+            if(dd.checkAvailablity(dm))
            {
-               request.setAttribute("allocate_domain",url);
+               request.setAttribute("allocate_domain",dm);
                rd=request.getRequestDispatcher("service.jsp");
                rd.forward(request, response);
                

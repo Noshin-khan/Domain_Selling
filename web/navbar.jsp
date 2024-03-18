@@ -1,9 +1,3 @@
-<%-- 
-    Document   : navbar
-    Created on : 09-Mar-2024, 11:30:05 pm
-    Author     : noshi
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@page import="com.dominify.entity.User" %>
