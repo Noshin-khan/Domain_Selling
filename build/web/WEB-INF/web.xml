@@ -17,8 +17,8 @@
         <servlet-class>com.dominify.servlet.available</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>bookdomain</servlet-name>
-        <servlet-class>com.dominify.servlet.bookdomain</servlet-class>
+        <servlet-name>coin_account</servlet-name>
+        <servlet-class>com.dominify.servlet.coin_account</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>signup</servlet-name>
@@ -46,7 +46,7 @@
         <url-pattern>/available</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>bookdomain</servlet-name>
-        <url-pattern>/bookdomain</url-pattern>
+        <servlet-name>coin_account</servlet-name>
+        <url-pattern>/coin_account</url-pattern>
     </servlet-mapping>
 </web-app>
